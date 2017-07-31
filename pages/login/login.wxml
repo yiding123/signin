@@ -24,7 +24,7 @@
   </view>
 
   <view class="weui-btn-area">
-    <button class="weui-btn" form-type="submit">签到绑定</button>
+    <button class="weui-btn" form-type="submit">登录</button>
   </view>
   </form>
 </view>
