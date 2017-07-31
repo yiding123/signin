@@ -4,7 +4,7 @@
 
 
 // 此处主机域名修改成腾讯云解决方案分配的域名
-var host = 'http://localhost:8080/admxrest';
+var host = 'https://api.cloudadmx.com';
 var custom = 'custom';
 var apiUrlBase = host + "/" + custom ;
 
