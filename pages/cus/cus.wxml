@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="xbox">
+    <view class="xname">姓名：{{list.name}}</view>
+    <view class="xname">学号：{{list.num}}</view>
+    <button size="mini">获取签到位置</button>
+    <view class="address">签到地址：{{list.address}}</view>
+    <view class="weui-btn-area">
+    <button class="weui-btn" bindtap="getaddress" type="primary">点击签到</button>
+    </view>
+  </view>
+</view>

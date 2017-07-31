@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/cus/cus",
+    "pages/index/index",
+    "pages/message/message",
+    "pages/messin/messin",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#26b8f3",
+    "navigationBarTitleText": "学习签到 ",
+    "navigationBarTextStyle": "#fff"
+  }
+}
