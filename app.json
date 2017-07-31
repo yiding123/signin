@@ -1,7 +1,7 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/cus/cus",
-    "pages/index/index",
     "pages/message/message",
     "pages/messin/messin",
     "pages/logs/logs"

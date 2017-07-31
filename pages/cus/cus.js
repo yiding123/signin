@@ -10,16 +10,7 @@ Page({
   onLoad: function (e) {
     var that = this;
     console.log(e)
-    if (app.globalData.userInfo == null){
-      // wx.navigateTo({
-      //   url: '../index/index',
-      // })
-      wx.redirectTo({
-        url: '../index/index',
-      })
-    }else{
-      this.aa()
-    }
+    
    
   },
   getaddress:function(){
