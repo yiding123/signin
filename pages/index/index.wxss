@@ -1,7 +1,10 @@
 /**index.wxss**/
-.container{
-  margin-top:100px;
+
+.container {
+  padding: 10px;
+  margin-top: 20px;
 }
+
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -14,9 +17,13 @@
   margin: 20rpx;
   border-radius: 50%;
 }
-.title{
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 20px;
 
+.x-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.address{
+  margin-bottom:10px;
 }

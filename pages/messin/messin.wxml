@@ -3,42 +3,67 @@
     <view class="mes-title">{{list.title}}</view>
     <view class="mes-time">{{list.time}}</view>
     <view class="mes-content">
-        <rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>  
+      <rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
     </view>
     <button size="mini" bindtap="toAddDiary" class="btn">留言/回复</button>
   </view>
   <!--留言添加按钮  -->
-  
+
   <!-- 留言内容表单 -->
   <view class="js_dialog" id="androidDialog1" style="opacity: 1;" wx:if="{{writeDiary}}">
-  <view class="weui-mask"></view>
-  <view class="weui-dialog weui-skin_android">
-    <view class="weui-dialog__hd"><strong class="weui-dialog__title">留言回复</strong>  </view>
-    <form bindsubmit="addDiary" report-submit="true">
-      <view class="weui-dialog__bd">
-        <view class="weui-cells__title">标题</view>
-        <view class="weui-cells weui-cells_after-title">
-          <view class="weui-cell weui-cell_input">
-            <view class="weui-cell__bd">
-              <input class="weui-input" name="title" placeholder="请输入标题" />
+    <view class="weui-mask"></view>
+    <view class="weui-dialog weui-skin_android">
+      <view class="weui-dialog__hd"><strong class="weui-dialog__title">留言回复</strong> </view>
+      <form bindsubmit="addDiary" report-submit="true">
+        <view class="weui-dialog__bd">
+          <input name="id" value="{{list.id}}" style="display:none" />
+          <input name="name" value="{{name}}" style="display:none" />
+          <input name="role" value="{{role}}" style="display:none" />
+
+          <view class="weui-cells__title">留言内容</view>
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+              <view class="weui-cell__bd">
+                <textarea class="weui-textarea" name="content" placeholder="请输入留言内容" style="height: 3.3em" />
+                <view class="weui-textarea-counter">0/200</view>
+              </view>
             </view>
           </view>
         </view>
-        <view class="weui-cells__title">留言内容</view>
-        <view class="weui-cells weui-cells_after-title">
-          <view class="weui-cell">
-            <view class="weui-cell__bd">
-              <textarea class="weui-textarea" name="content" placeholder="请输入留言内容" style="height: 3.3em" />
-              <view class="weui-textarea-counter">0/200</view>
-            </view>
-          </view>
+        <view class="weui-dialog__ft">
+          <view class="weui-dialog__btn weui-dialog__btn_default" bindtap="noneWindows">取消</view>
+          <button loading="{{loading}}" class="weui-dialog__btn weui-dialog__btn_primary" formType="submit">提交</button>
         </view>
-      </view>
-      <view class="weui-dialog__ft">
-        <view class="weui-dialog__btn weui-dialog__btn_default" bindtap="noneWindows">取消</view>
-        <button loading="{{loading}}" class="weui-dialog__btn weui-dialog__btn_primary" formType="submit">提交</button>
-      </view>
-    </form>
+      </form>
+    </view>
   </view>
-</view>
+
+
+  <!-- 评论列表  -->
+
+  <view class="common-t">留言栏</view>
+  <block wx:for="{{comments}}">
+
+    <block wx:if="{{comments.length > 0}}">
+
+      <view class="common">
+        <view class="img">
+          <view wx:if="{{item.role==1}}">
+            <image src="../../images/student.png" class="userimg"></image>
+          </view>
+          <view wx:elif="{{item.role==2}}">
+            <image src="../../images/teacher.png" class="userimg"></image>
+          </view>
+        </view>
+        <view class="comtext">
+          <view class="comcontent">{{item.content}}</view>
+          <view class="comtime">{{item.name}} {{item.time}}</view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="smal">暂时还没有评论</view>
+    </block>
+  </block>
+
 </view>

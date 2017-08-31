@@ -22,8 +22,12 @@
   font-size: 15px;
 }
 
-.btn{
+.btn {
   margin-top: 10px;
+}
+.comusername{
+  font-size: 12px;
+  color: #949295;
 }
 /**index.wxss**/
 
@@ -170,4 +174,48 @@ form .weui-dialog__bd:first-child {
 
 .searchbar-result:before {
   display: none;
+}
+
+/*common  */
+
+.common {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+
+.common{
+  padding: 10px;
+  border-bottom:1px solid #ccc;
+}
+.comcontent {
+  font-size: 17px;
+}
+
+.comtime {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #949295;
+}
+
+
+.smal{
+  margin-top: 20px;
+  color:darkgray;
+  font-size:14px;
+  border: none;
+  text-align: center;
+}
+.common-t{
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.userimg{
+    width: 100rpx;
+  height: 100rpx;
+  margin: 10rpx;
+  border-radius: 50%;
 }

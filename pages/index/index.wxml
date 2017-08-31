@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="xbox">
+    <view class="x-1">
+      <view class="xname">姓名：{{user.account}}</view>
+      <view>
+        <button size="mini" bindtap="getaddress">获取签到位置</button>
+      </view>
+    </view>
+
+    <view class="address">定位：{{address[1]}}  {{address[0]}}</view>
+
+<form bindsubmit="doBegin">
+  <input name="username" value="{{user.account}}" style="display:none" />
+  <input name="useraddress" value="{{list.address}}" style="display:none"/>
+
+    <view class="weui-cells weui-cells_after-title"> 
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">课程名</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" auto-focus  name="class" placeholder="请输入课程名称"/>
+      </view>
+    </view>
+    </view> 
+
+   <view class="weui-btn-area">
+       <button class="weui-btn" form-type="submit">点击签到</button>
+    </view>
+</form>
+
+   
+
+  </view>
+</view>

@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/login/login",
-    "pages/cus/cus",
+    "pages/index/index",
     "pages/message/message",
     "pages/messin/messin",
     "pages/logs/logs"
@@ -11,5 +11,21 @@
     "navigationBarBackgroundColor": "#26b8f3",
     "navigationBarTitleText": "学习签到 ",
     "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "点击签到",
+        "iconPath": "images/a-1.png",
+        "selectedIconPath": "images/a.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "最新消息",
+        "iconPath": "images/b-1.png",
+        "selectedIconPath": "images/b.png"
+      }
+    ]
   }
 }
